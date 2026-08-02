@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Adi &amp; Eva</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- GLightbox Plugin CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Opening Cover Screen Overlay -->
+    <div id="opening-screen" class="opening-screen" style="background-image: url('assets/img/GIK-1.jpeg');">
+        <div class="opening-overlay"></div>
+        <div class="opening-content">
+            <p class="opening-subtitle">The Wedding of</p>
+            <h1 class="opening-title">ADI &amp; EVA</h1>
+            
+            <div class="opening-guest-box">
+                <p class="opening-guest-label">Special Invitation to</p>
+                <h2 id="guest-name-display" class="opening-guest-name">Tamu Undangan</h2>
+                <p class="opening-apology">Mohon maaf apabila ada kesalahan penulisan nama/gelar</p>
+            </div>
+
+            <button id="btn-open-invitation" class="btn-open-invitation" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Buka Undangan</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Background Music & Floating Control Button -->
+    <audio id="bg-music" loop src="assets/music/backsound.mp3" preload="auto"></audio>
+    
+    <button id="btn-music-toggle" class="btn-music-toggle hidden" type="button" aria-label="Toggle Music">
+        <svg id="music-icon-play" class="music-icon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <svg id="music-icon-pause" class="music-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+    </button>
+
+    <div class="outer-page">
+        <div class="left-page" style="background-image: url('assets/img/GIK-1.jpeg');">
+            <div class="left-page-overlay"></div>
+            <div class="left-page-content">
+                <p class="left-subtitle">THE WEDDING OF</p>
+                <h1 class="left-title">Adi &amp; Eva</h1>
+                <p class="left-desc">
+                    Suatu kehormatan bagi kami, apabila bapak/ibu/sodara/i, berkenan hadir untuk memberikan doa restu kepada putra putri kami
+                </p>
+            </div>
+        </div>
+        <div class="right-page">
+            <!-- Section Cover Carousel -->
+            <div class="section-cover">
+                <div class="carousel-container">
+                    <div class="slide active" style="background-image: url('assets/img/GIK-1.jpeg');"></div>
+                    <div class="slide" style="background-image: url('assets/img/GIK-14.jpeg');"></div>
+                    <div class="slide" style="background-image: url('assets/img/GIK-4.jpeg');"></div>
+                    <div class="slide" style="background-image: url('assets/img/GIK-51.jpeg');"></div>
+                </div>
+                <div class="carousel-overlay"></div>
+                <div class="content-overlay">
+                    <div class="header-section">
+                        <p class="subtitle">THE WEDDING OF</p>
+                        <h1 class="title">Adi &amp; Eva</h1>
+                        <p class="date">Rabu, 19 Agustus 2026</p>
+                    </div>
+                    <div class="guest-section">
+                        <p class="dear">Dear</p>
+                        <h2 id="cover-guest-name" class="guest-name">Tamu Undangan</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Quote & Greeting -->
+            <div class="section-quote">
+                <div class="quote-container">
+                    <p class="quote-text">
+                        “Ya Tuhan Yang Maha Pengasih, anugrahkanlah kepada pasangan ini tanpa terpisahkan, panjang umur, semoga pernikahan ini dianugrahkan putra-putri dan cucu yang memberi penghiburan, tinggal di rumah yang penuh kebahagiaan.”
+                    </p>
+                    <p class="quote-source">(Reg Weda X. 85.42)</p>
+
+                    <h2 class="greeting-title">OM SWASTYASTU</h2>
+
+                    <p class="greeting-text">
+                        Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa, kami bermaksud mengundang Bapak/Ibu/Saudara/i, pada Acara Pawiwahan (Pernikahan) kami :
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section Couple (Mempelai Pria & Wanita) -->
+            <div class="section-couple">
+                <!-- Mempelai Pria -->
+                <div class="couple-card">
+                    <div class="photo-frame groom-frame" style="background-image: url('assets/img/GIK-51.jpeg');"></div>
+                    <div class="couple-info">
+                        <p class="script-label">Mempelai Pria</p>
+                        <h2 class="couple-name">I Gede Adi Wijaya</h2>
+                        <p class="couple-bio">
+                            Putra Pertama dari pasangan<br><strong>Bpk. I Nyoman Sukra &amp; Ibu Ni Wayan Darsih</strong><br><br>Alamat: Link Gadon GG Manggis No 4
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mempelai Wanita -->
+                <div class="couple-card">
+                    <div class="photo-frame bride-frame" style="background-image: url('assets/img/GIK-14.jpeg');"></div>
+                    <div class="couple-info">
+                        <p class="script-label">Mempelai Wanita</p>
+                        <h2 class="couple-name">Putu Eva Cahyani</h2>
+                        <p class="couple-bio">
+                            Putri Pertama dari pasangan<br><strong>Bpk. I Nyoman Kertiyasa &amp; Ibu Dewa Ayu Citrawati</strong><br><br>Alamat: Sesetan, Denpasar Selatan
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Pawiwahan -->
+            <div class="section-pawiwahan">
+                <div class="pawiwahan-container">
+                    <h2 class="pawiwahan-title">Pawiwahan</h2>
+                    
+                    <div class="pawiwahan-names">
+                        <p>I Gede Adi Wijaya</p>
+                        <p>Putu Eva Cahyani</p>
+                    </div>
+
+                    <div class="pawiwahan-photo-frame" style="background-image: url('assets/img/GIK-4.jpeg');"></div>
+
+                    <p class="pawiwahan-invitation">
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai pada:
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section Event (Acara Kami) -->
+            <div class="section-event">
+                <div class="event-container">
+                    <h2 class="event-title">ACARA KAMI</h2>
+
+                    <!-- Event Info Grid -->
+                    <div class="event-grid">
+                        <div class="grid-cell cell-day">
+                            <p>RABU</p>
+                        </div>
+                        <div class="grid-cell cell-time">
+                            <p class="label">Pukul</p>
+                            <p class="val">13.00 WITA – Selesai</p>
+                        </div>
+                        <div class="grid-cell cell-date">
+                            <p class="date-num">19</p>
+                            <p class="month-year">AGUSTUS 2026</p>
+                        </div>
+                        <div class="grid-cell cell-location">
+                            <p class="loc-title">Jalan Raya Gadon, Gg Manggis No 4</p>
+                            <p class="loc-desc">Lokasi Upacara</p>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="countdown-container">
+                        <div class="cd-item">
+                            <span id="cd-days" class="cd-num">0</span>
+                            <span class="cd-label">Days</span>
+                        </div>
+                        <div class="cd-item">
+                            <span id="cd-hours" class="cd-num">0</span>
+                            <span class="cd-label">Hours</span>
+                        </div>
+                        <div class="cd-item">
+                            <span id="cd-minutes" class="cd-num">0</span>
+                            <span class="cd-label">Minutes</span>
+                        </div>
+                        <div class="cd-item">
+                            <span id="cd-seconds" class="cd-num">0</span>
+                            <span class="cd-label">Seconds</span>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Link -->
+                    <div class="maps-wrapper">
+                        <hr class="maps-divider">
+                        <a href="https://maps.app.goo.gl/hG8v8ggMFQ8XfUv5A" target="_blank" rel="noopener noreferrer" class="maps-button">GOOGLE MAPS</a>
+                        <hr class="maps-divider">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Gallery (Our Capture Moment) -->
+            <div class="section-gallery">
+                <div class="gallery-container">
+                    <h2 class="gallery-title">Our Capture Moment</h2>
+
+                    <div class="gallery-grid">
+                        <a href="assets/img/GIK-1.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-1.jpeg" alt="Capture Moment 1" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-14.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-14.jpeg" alt="Capture Moment 2" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-4.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-4.jpeg" alt="Capture Moment 3" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-51.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-51.jpeg" alt="Capture Moment 4" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-1.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-1.jpeg" alt="Capture Moment 5" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-14.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-14.jpeg" alt="Capture Moment 6" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-4.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-4.jpeg" alt="Capture Moment 7" loading="lazy" />
+                        </a>
+                        <a href="assets/img/GIK-51.jpeg" class="glightbox gallery-item" data-gallery="wedding-gallery">
+                            <img src="assets/img/GIK-51.jpeg" alt="Capture Moment 8" loading="lazy" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Guestbook (Buku Tamu) -->
+            <div class="section-guestbook">
+                <div class="guestbook-container">
+                    <h2 class="guestbook-title">Buku Tamu</h2>
+                    <p class="guestbook-subtitle">Ucapkan sesuatu untuk hari bahagia kami</p>
+
+                    <div class="guestbook-card">
+                        <!-- Card Header -->
+                        <div class="gb-card-header">
+                            <span class="gb-header-title"><span id="wishes-count">47</span> Wishes (Wishes)</span>
+                        </div>
+
+                        <!-- Form -->
+                        <form id="guestbook-form" class="gb-form">
+                            <input type="text" id="gb-name" class="gb-input" placeholder="Nama (name)" required />
+                            
+                            <div class="gb-textarea-wrapper">
+                                <textarea id="gb-message" class="gb-textarea" placeholder="Ucapan (wishes)" maxlength="500" rows="3" required></textarea>
+                                <span class="gb-char-counter"><span id="char-left">500</span></span>
+                            </div>
+
+                            <select id="gb-attendance" class="gb-select" required>
+                                <option value="" disabled selected>Konfirmasi Kehadiran (attendance)</option>
+                                <option value="Hadir (accept with pleasure)">Hadir (accept with pleasure)</option>
+                                <option value="Tidak Hadir">Tidak Hadir</option>
+                                <option value="Ragu-ragu">Ragu-ragu</option>
+                            </select>
+
+                            <button type="submit" class="gb-btn-send">Kirim (Send)</button>
+                        </form>
+
+                        <!-- Wishes List (Populated via Firestore) -->
+                        <div id="wishes-list" class="wishes-list">
+                        </div>
+
+                        <!-- Pagination Container (Dynamic) -->
+                        <div id="gb-pagination" class="gb-pagination" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Wedding Gift -->
+            <div class="section-gift">
+                <div class="gift-container">
+                    <h2 class="gift-title">Wedding Gift</h2>
+                    <p class="gift-desc">
+                        Bagi yang ingin memberikan tanda kasih kepada mempelai, Anda dapat menggunakan akun virtual atau E-wallet di bawah ini:
+                    </p>
+
+                    <!-- Toggle Button -->
+                    <button id="btn-toggle-gift" class="btn-toggle-gift" type="button">
+                        <svg id="toggle-icon" class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                        <span id="toggle-text">Sembunyikan Rekening</span>
+                    </button>
+
+                    <!-- Gift Cards Container -->
+                    <div id="gift-cards-container" class="gift-cards-container">
+                        <!-- Card Bank BNI -->
+                        <div class="gift-card">
+                            <div class="card-content">
+                                <h3 class="bank-name">Bank BNI</h3>
+                                <p class="acc-label">No Rekening</p>
+                                <p id="acc-number-1" class="acc-number">1937397663</p>
+                                <p class="acc-holder">Putu Eva Cahyani</p>
+                                <div class="card-divider"></div>
+                            </div>
+                            <button class="btn-copy" type="button" data-copy="1937397663" title="Salin Nomor Rekening">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span class="copy-tooltip">Disalin!</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Footer (Matur Suksma) -->
+            <div class="section-footer" style="background-image: url('assets/img/GIK-1.jpeg');">
+                <div class="footer-overlay"></div>
+                <div class="footer-content">
+                    <h2 class="footer-title">Matur Suksma</h2>
+                    <p class="footer-desc">
+                        Setiap ucapan dan doa yang kamu berikan, jadi bagian indah dalam cerita kami. Kami tak sabar menyambutmu di hari spesial nanti.
+                    </p>
+
+                    <div class="footer-branding">
+                        <p class="creator-text">created by PutuGede Photography</p>
+
+                        <div class="social-links">
+                            <a href="https://instagram.com/putugedephotography" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                <span>@putugedephotography</span>
+                            </a>
+                            
+                            <a href="https://tiktok.com/@putugedephotography" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                </svg>
+                                <span>@putugedephotography</span>
+                            </a>
+
+                            <a href="https://wa.me/6281237421926" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>+62 812-3742-1926</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GLightbox Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Firestore REST API Endpoint
+            const FIREBASE_API_URL = 'https://firestore.googleapis.com/v1/projects/wedding-invitation-2b7f9/databases/(default)/documents/wedding-Adi-Eva';
+
+            // Background Music & Opening Screen Controls
+            const openingScreen = document.getElementById('opening-screen');
+            const btnOpenInvitation = document.getElementById('btn-open-invitation');
+            const bgMusic = document.getElementById('bg-music');
+            const btnMusicToggle = document.getElementById('btn-music-toggle');
+            const musicIconPlay = document.getElementById('music-icon-play');
+            const musicIconPause = document.getElementById('music-icon-pause');
+            let isMusicPlaying = false;
+
+            // URL parameter ?to=... handler with 'Tamu Undangan' default fallback
+            const urlParams = new URLSearchParams(window.location.search);
+            const rawGuestParam = urlParams.get('to');
+            const guestName = (rawGuestParam && rawGuestParam.trim() !== '') ? rawGuestParam.trim() : 'Tamu Undangan';
+
+            // Update Opening Screen guest display
+            const openingGuestDisplay = document.getElementById('guest-name-display');
+            if (openingGuestDisplay) {
+                openingGuestDisplay.textContent = guestName;
+            }
+
+            // Update Cover Section guest display
+            const coverGuestDisplay = document.getElementById('cover-guest-name');
+            if (coverGuestDisplay) {
+                coverGuestDisplay.textContent = guestName;
+            }
+
+            if (btnOpenInvitation && openingScreen) {
+                btnOpenInvitation.addEventListener('click', () => {
+                    // Slide opening screen up
+                    openingScreen.classList.add('slide-up');
+
+                    // Show floating music button
+                    if (btnMusicToggle) {
+                        btnMusicToggle.classList.remove('hidden');
+                    }
+
+                    // Play background music
+                    if (bgMusic) {
+                        bgMusic.play().then(() => {
+                            isMusicPlaying = true;
+                            btnMusicToggle.classList.add('spinning');
+                            if (musicIconPlay && musicIconPause) {
+                                musicIconPlay.classList.add('hidden');
+                                musicIconPause.classList.remove('hidden');
+                            }
+                        }).catch(err => {
+                            console.log('Audio autoplay prevented or failed:', err);
+                        });
+                    }
+
+                    // Remove opening screen after transition
+                    setTimeout(() => {
+                        openingScreen.style.display = 'none';
+                    }, 1200);
+                });
+            }
+
+            // Floating Music Play/Pause Toggle
+            if (btnMusicToggle && bgMusic) {
+                btnMusicToggle.addEventListener('click', () => {
+                    if (isMusicPlaying) {
+                        bgMusic.pause();
+                        isMusicPlaying = false;
+                        btnMusicToggle.classList.remove('spinning');
+                        if (musicIconPlay && musicIconPause) {
+                            musicIconPlay.classList.remove('hidden');
+                            musicIconPause.classList.add('hidden');
+                        }
+                    } else {
+                        bgMusic.play().then(() => {
+                            isMusicPlaying = true;
+                            btnMusicToggle.classList.add('spinning');
+                            if (musicIconPlay && musicIconPause) {
+                                musicIconPlay.classList.add('hidden');
+                                musicIconPause.classList.remove('hidden');
+                            }
+                        }).catch(err => {
+                            console.log('Audio playback error:', err);
+                        });
+                    }
+                });
+            }
+
+            // Initialize GLightbox Carousel Modal Plugin
+            const lightbox = GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+                zoomable: true
+            });
+
+            // Background Carousel Logic
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            const slideInterval = 4000;
+
+            setInterval(() => {
+                if (slides.length > 0) {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+            }, slideInterval);
+
+            // Real-time Countdown Timer Logic (Target: 19 Agustus 2026 13:00 WITA)
+            const eventTargetDate = new Date('2026-08-19T13:00:00+08:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = eventTargetDate - now;
+
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById('cd-days').textContent = days;
+                    document.getElementById('cd-hours').textContent = hours;
+                    document.getElementById('cd-minutes').textContent = minutes;
+                    document.getElementById('cd-seconds').textContent = seconds;
+                } else {
+                    document.getElementById('cd-days').textContent = 0;
+                    document.getElementById('cd-hours').textContent = 0;
+                    document.getElementById('cd-minutes').textContent = 0;
+                    document.getElementById('cd-seconds').textContent = 0;
+                }
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Guestbook Textarea Character Count
+            const gbMessage = document.getElementById('gb-message');
+            const charLeft = document.getElementById('char-left');
+            if (gbMessage && charLeft) {
+                gbMessage.addEventListener('input', () => {
+                    const remaining = 500 - gbMessage.value.length;
+                    charLeft.textContent = remaining;
+                });
+            }
+
+            // Helper: Escape HTML
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text || '';
+                return div.innerHTML;
+            }
+
+            // Helper: Calculate relative time
+            function getRelativeTime(dateString) {
+                if (!dateString) return 'Baru saja';
+                const date = new Date(dateString);
+                const now = new Date();
+                const diffInSeconds = Math.floor((now - date) / 1000);
+
+                if (diffInSeconds < 60) return 'Baru saja';
+                const diffInMinutes = Math.floor(diffInSeconds / 60);
+                if (diffInMinutes < 60) return `${diffInMinutes} menit lalu`;
+                const diffInHours = Math.floor(diffInMinutes / 60);
+                if (diffInHours < 24) return `${diffInHours} jam lalu`;
+                const diffInDays = Math.floor(diffInHours / 24);
+                if (diffInDays < 30) return `${diffInDays} hari lalu`;
+                const diffInMonths = Math.floor(diffInDays / 30);
+                return `${diffInMonths} bulan lalu`;
+            }
+
+            // Global State for Wishes Pagination
+            let allWishesDocs = [];
+            let currentWishesPage = 1;
+            const ITEMS_PER_PAGE = 5;
+
+            // Render wishes page slice
+            function renderWishesPage(page) {
+                currentWishesPage = page;
+                const wishesList = document.getElementById('wishes-list');
+                if (!wishesList) return;
+
+                if (allWishesDocs.length === 0) {
+                    wishesList.innerHTML = `
+                        <div class="wish-item" style="text-align: center; color: #777; padding: 2rem 1rem;">
+                            Belum ada ucapan. Jadilah yang pertama memberikan ucapan &amp; doa restu!
+                        </div>
+                    `;
+                    renderPaginationControls(0, 1);
+                    return;
+                }
+
+                const startIndex = (page - 1) * ITEMS_PER_PAGE;
+                const pageDocs = allWishesDocs.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+                wishesList.innerHTML = pageDocs.map(doc => {
+                    const fields = doc.fields || {};
+                    const name = fields.nama?.stringValue || fields.name?.stringValue || 'Tamu Undangan';
+                    const message = fields.ucapan?.stringValue || fields.message?.stringValue || '';
+                    const attendance = fields.konfirmasi?.stringValue || fields.attendance?.stringValue || 'Hadir';
+                    const timeAgo = getRelativeTime(doc.createTime);
+
+                    return `
+                        <div class="wish-item">
+                            <div class="wish-header">
+                                <span class="wish-name">${escapeHtml(name)}</span>
+                                <span class="wish-badge"><i class="check-icon">✓</i> ${escapeHtml(attendance)}</span>
+                            </div>
+                            <p class="wish-time">${timeAgo}</p>
+                            <p class="wish-text">${escapeHtml(message)}</p>
+                        </div>
+                    `;
+                }).join('');
+
+                const totalPages = Math.ceil(allWishesDocs.length / ITEMS_PER_PAGE);
+                renderPaginationControls(totalPages, page);
+            }
+
+            // Render pagination controls (Auto-hide if <= 1 page)
+            function renderPaginationControls(totalPages, page) {
+                const paginationEl = document.getElementById('gb-pagination');
+                if (!paginationEl) return;
+
+                if (totalPages <= 1) {
+                    paginationEl.style.display = 'none';
+                    return;
+                }
+
+                paginationEl.style.display = 'flex';
+                let html = '';
+
+                // Previous Button
+                if (page > 1) {
+                    html += `<span class="page-nav" data-page="${page - 1}">&larr; Previous</span>`;
+                } else {
+                    html += `<span class="page-nav disabled">&larr; Previous</span>`;
+                }
+
+                // Page Numbers
+                for (let i = 1; i <= totalPages; i++) {
+                    if (i === page) {
+                        html += `<span class="page-num active">${i}</span>`;
+                    } else {
+                        html += `<span class="page-num" data-page="${i}">${i}</span>`;
+                    }
+                }
+
+                // Next Button
+                if (page < totalPages) {
+                    html += `<span class="page-nav" data-page="${page + 1}">Next &rarr;</span>`;
+                } else {
+                    html += `<span class="page-nav disabled">Next &rarr;</span>`;
+                }
+
+                paginationEl.innerHTML = html;
+
+                // Add click listeners to pagination buttons
+                paginationEl.querySelectorAll('[data-page]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetPage = parseInt(btn.getAttribute('data-page'));
+                        if (targetPage) {
+                            renderWishesPage(targetPage);
+                        }
+                    });
+                });
+            }
+
+            // Function to GET wishes from Firestore
+            async function loadWishesFromFirebase() {
+                const wishesCountEl = document.getElementById('wishes-count');
+
+                try {
+                    const response = await fetch(FIREBASE_API_URL);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    allWishesDocs = data.documents || [];
+
+                    // Sort documents by createTime descending (newest first)
+                    allWishesDocs.sort((a, b) => new Date(b.createTime || 0) - new Date(a.createTime || 0));
+
+                    if (wishesCountEl) {
+                        wishesCountEl.textContent = allWishesDocs.length;
+                    }
+
+                    renderWishesPage(1);
+
+                } catch (error) {
+                    console.error('Error loading wishes from Firestore:', error);
+                }
+            }
+
+            // Load initial wishes from Firestore
+            loadWishesFromFirebase();
+
+            // Guestbook Form Submit Handler (POST to Firestore)
+            const gbForm = document.getElementById('guestbook-form');
+            if (gbForm) {
+                gbForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const btnSend = gbForm.querySelector('.gb-btn-send');
+                    const name = document.getElementById('gb-name').value.trim();
+                    const message = document.getElementById('gb-message').value.trim();
+                    const attendance = document.getElementById('gb-attendance').value || 'Hadir (accept with pleasure)';
+
+                    if (!name || !message) return;
+
+                    // Disable button during POST
+                    if (btnSend) {
+                        btnSend.disabled = true;
+                        btnSend.textContent = 'Mengirim...';
+                    }
+
+                    try {
+                        const payload = {
+                            fields: {
+                                nama: { stringValue: name },
+                                ucapan: { stringValue: message },
+                                konfirmasi: { stringValue: attendance }
+                            }
+                        };
+
+                        const response = await fetch(FIREBASE_API_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`Failed to save: ${response.status}`);
+                        }
+
+                        // Reset form & character counter
+                        gbForm.reset();
+                        if (charLeft) charLeft.textContent = '500';
+
+                        // Reload wishes list from Firebase
+                        await loadWishesFromFirebase();
+
+                    } catch (error) {
+                        console.error('Error posting wish to Firestore:', error);
+                        alert('Gagal mengirim ucapan. Silakan coba lagi.');
+                    } finally {
+                        if (btnSend) {
+                            btnSend.disabled = false;
+                            btnSend.textContent = 'Kirim (Send)';
+                        }
+                    }
+                });
+            }
+
+            // Toggle Show/Hide Bank Account Cards
+            const btnToggleGift = document.getElementById('btn-toggle-gift');
+            const giftCardsContainer = document.getElementById('gift-cards-container');
+            const toggleText = document.getElementById('toggle-text');
+            const toggleIcon = document.getElementById('toggle-icon');
+
+            if (btnToggleGift && giftCardsContainer && toggleText) {
+                let isVisible = true;
+                btnToggleGift.addEventListener('click', () => {
+                    isVisible = !isVisible;
+                    if (isVisible) {
+                        giftCardsContainer.style.display = 'flex';
+                        toggleText.textContent = 'Sembunyikan Rekening';
+                        if (toggleIcon) {
+                            toggleIcon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
+                        }
+                    } else {
+                        giftCardsContainer.style.display = 'none';
+                        toggleText.textContent = 'Tampilkan Rekening';
+                        if (toggleIcon) {
+                            toggleIcon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
+                        }
+                    }
+                });
+            }
+
+            // Copy to Clipboard Handler
+            const copyButtons = document.querySelectorAll('.btn-copy');
+            copyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const textToCopy = btn.getAttribute('data-copy');
+                    if (textToCopy) {
+                        navigator.clipboard.writeText(textToCopy).then(() => {
+                            btn.classList.add('copied');
+                            setTimeout(() => {
+                                btn.classList.remove('copied');
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
