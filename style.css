@@ -278,70 +278,92 @@ body {
     position: relative;
     width: 100%;
     background-color: #EAE6DF;
-    color: #333333;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 2.2rem 6rem 2.2rem;
-    gap: 5.5rem;
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    gap: 3rem;
 }
 
 .couple-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    position: relative;
     width: 100%;
-    max-width: 380px;
-}
-
-.photo-frame {
-    width: 100%;
-    max-width: 320px;
-    height: 450px;
+    max-width: 400px;
+    height: 580px;
     background-size: cover;
     background-position: center;
-    margin-bottom: 2.2rem;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12), 0 8px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.groom-frame {
-    border-radius: 200px 200px 140px 0px;
-}
-
-.bride-frame {
-    border-radius: 200px 200px 0px 140px;
+.couple-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .couple-info {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1.6rem 2.2rem 1.6rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.script-label {
-    font-family: 'Alex Brush', cursive;
-    font-size: 2.7rem;
-    color: #5A473C;
-    margin-bottom: 0.6rem;
-    line-height: 1.1;
+.groom-info {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.bride-info {
+    text-align: right;
+    align-items: flex-end;
 }
 
 .couple-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-weight: 600;
-    color: #3A322D;
-    margin-bottom: 1.1rem;
-    line-height: 1.25;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
 }
 
-.couple-bio {
+.couple-relation {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    line-height: 1.65;
-    color: #635A52;
-    max-width: 340px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+.couple-parents {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.1rem;
+    line-height: 1.45;
+}
+
+.couple-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
 }
 
 /* Pawiwahan Section */
